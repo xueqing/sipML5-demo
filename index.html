@@ -433,7 +433,7 @@
                     if (!location.protocol.match('https')) {
                         if (confirm("Screen sharing requires https://. Do you want to be redirected?")) {
                             sipUnRegister();
-                            window.location = 'https://ns313841.ovh.net/call.htm';
+                            window.location = 'http://localhost:3000/call.html';
                         }
                         return;
                     }
@@ -1119,7 +1119,7 @@
                 <img alt="sipML5" class="brand" src="./images/sipml-34x39.png" />
                 <div class="nav-collapse">
                     <ul class="nav">
-                        <li class="active"><a href="index.htmlsvn=236">Home</a></li>
+                        <li class="active"><a href="index.html&svn=236">Home</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
