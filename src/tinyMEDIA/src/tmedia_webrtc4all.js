@@ -41,7 +41,7 @@ function WebRtc4all_Init() {
         // WebRtc plugin type
         try {
             if (__webrtc_type == WebRtcType_e.NONE) {
-                window.nativeURL = (window.webkitURL || window.URL);
+                window.nativeURL = (window.URL || window.webkitURL);
                 if ((navigator.getUserMedia && window.RTCPeerConnection)) {
                     __webrtc_type = WebRtcType_e.NATIVE; // Google Chrome
                 }
