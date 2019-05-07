@@ -1,3 +1,16 @@
 node_modules/
 package-lock.json
 .vscode/ipch
+
+# sipml5
+/docgen
+/*.suo
+/release/docgen
+/release/assets
+/release/index.html
+/release/images
+/release/sounds
+/release/call.htm
+/release/contact.htm
+/release/error.htm
+/release/expert.htm
