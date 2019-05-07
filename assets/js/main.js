@@ -275,6 +275,12 @@ function sipRegister() {
 // sends SIP REGISTER (expires=0) to logout
 function sipUnRegister() {
   if (oSipStack) {
+    oSipStack.setConfiguration({
+      sip_headers: [
+        { name: 'expires', value: '0' }
+    ]
+    }
+    );
     oSipStack.stop(); // shutdown all sessions
   }
 }

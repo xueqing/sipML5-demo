@@ -784,6 +784,10 @@ tsip_stack.prototype.__set = function (ao_params) {
             case tsip_stack_param_type_e.HEADER:
                 {
                     if (o_curr.ao_values[1]) { // add
+                        var i_index = tsip_header.prototype.IndexOfByName(this.ao_headers, o_curr.ao_values[0]);
+                        if (i_index != -1) {
+                            this.ao_headers.splice(i_index, 1);
+                        }
                         this.ao_headers.push(new tsip_header_Dummy(o_curr.ao_values[0], o_curr.ao_values[1]));
                     }
                     else { // remove
